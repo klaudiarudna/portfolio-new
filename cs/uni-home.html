@@ -7,20 +7,77 @@
   <link rel="stylesheet" href="../styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../img/krlogo.svg">
-  <!-- <script>
-  const password = "klaudia2025"; // change this to your password
-  const entered = sessionStorage.getItem("caseStudyAccess");
+  <script>
+ const SALT = "somesalt123";
+  const STORED_HASH_BASE64 = "j7tF++JuruDAWZbDEgqcwcTYvD4mN+pdXq9Vh9av/9Q=";
 
-  if (entered !== password) {
-    const input = prompt("Enter password to view this page:");
-    if (input === password) {
-      sessionStorage.setItem("caseStudyAccess", password);
-    } else {
-      alert("Incorrect password. Redirecting to home page.");
-      window.location.href = "index.html";
+  // sessionStorage key we set when access is granted (we store a token, not the password)
+  const ACCESS_KEY = "caseStudyAccess";
+  const ACCESS_TOKEN = "granted-v1";
+
+  // max attempts before redirect
+  const MAX_ATTEMPTS = 3;
+
+  // helper: convert ArrayBuffer to Base64
+  function arrayBufferToBase64(buffer) {
+    const bytes = new Uint8Array(buffer);
+    let binary = "";
+    for (let i = 0; i < bytes.byteLength; i++) {
+      binary += String.fromCharCode(bytes[i]);
     }
+    return btoa(binary);
   }
-</script> -->
+
+  // compute SHA-256(salt + password) and return Base64 string
+  async function computeSaltedHashBase64(salt, password) {
+    const enc = new TextEncoder();
+    const data = enc.encode(salt + password);
+    const digest = await crypto.subtle.digest("SHA-256", data);
+    return arrayBufferToBase64(digest);
+  }
+
+  // main check routine (runs on page load)
+  (async function checkAccess() {
+    // If already granted in this session — skip prompt
+    if (sessionStorage.getItem(ACCESS_KEY) === ACCESS_TOKEN) {
+      return; // allowed to view
+    }
+
+    let attempts = 0;
+    // try to read stored attempt count (so refresh loses attempts? up to you)
+    const attemptsStored = sessionStorage.getItem(ACCESS_KEY + "-attempts");
+    if (attemptsStored) attempts = parseInt(attemptsStored, 10) || 0;
+
+    while (attempts < MAX_ATTEMPTS) {
+      const input = prompt("Enter password to view this page:");
+
+      // If user cancelled the prompt, treat as failed and redirect.
+      if (input === null) {
+        alert("No password entered. Redirecting to home page.");
+        window.location.href = "index.html";
+        return;
+      }
+
+      const candidateHash = await computeSaltedHashBase64(SALT, input);
+
+      if (candidateHash === STORED_HASH_BASE64) {
+        // success: store token (not the password) and allow viewing the page
+        sessionStorage.setItem(ACCESS_KEY, ACCESS_TOKEN);
+        // optionally clear attempt count
+        sessionStorage.removeItem(ACCESS_KEY + "-attempts");
+        return;
+      } else {
+        attempts += 1;
+        sessionStorage.setItem(ACCESS_KEY + "-attempts", String(attempts));
+        alert("Incorrect password. Attempts: " + attempts + " / " + MAX_ATTEMPTS);
+      }
+    }
+
+    // too many fails -> redirect
+    alert("Too many incorrect attempts. Redirecting to home page.");
+    window.location.href = "index.html";
+  })();
+</script> 
 </head>
 <body>
 
