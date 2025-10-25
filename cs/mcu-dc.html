@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study - Klaudia Rudna</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../img/krlogo.svg">
+  <!-- <script>
+  const password = "klaudia2025"; // change this to your password
+  const entered = sessionStorage.getItem("caseStudyAccess");
+
+  if (entered !== password) {
+    const input = prompt("Enter password to view this page:");
+    if (input === password) {
+      sessionStorage.setItem("caseStudyAccess", password);
+    } else {
+      alert("Incorrect password. Redirecting to home page.");
+      window.location.href = "index.html";
+    }
+  }
+</script> -->
+</head>
+<body>
+
+  <header class="container">
+      <nav class="">
+        <a href="http://klaudia.pro" class="logo"><img src="..\img\krlogo.svg" alt="Klaudia Rudna" />Klaudia Rudna</a>
+          <div class="burger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="../index.html" class="active-page">Case Studies</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero bg-light-gradient">
+      <div class="container">
+        <p class="case-tag">CASE STUDY</p>
+        <h1 class="hero-title">Unifying Car Dealer Tools Across Complex Systems and Multiple Platforms</h1>
+        <p class="hero-sub">Proved end-to-end product design expertise, solving complex systems and delivering scalable, technically-informed solutions across multiple platforms.</p>
+
+        <div class="hero-img narrow">
+          <img src="..\img\DChero.png" alt="Klaudia Rudna Logo"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container container-2col">
+        <div class="col">
+          <p class="case-tag">CHALLENGE</p>
+          <h2>Bridging a Fragmented Ecosystem</h2>
+          <p>Dealers faced a fragmented ecosystem: multiple customer types (single- and multi-location, manual and feed), legacy users (eBay, Gumtree, Motors.co.uk), and diverse vehicle types. Multiple internal and external systems - Dealer Centre Stock and Response, MCU backends, eBay and Gumtree tools - lacked a single source of truth.</p>
+          <p>The goal was to <b>create a single platform</b> that unified stock management, lead response, and account oversight across all systems, while handling multi-location relationships and complex data flows.</p>
+        </div>
+        <div class="col">
+          <p class="case-tag">MY ROLE</p>
+          <h2>Designing Across Multiple Systems</h2>
+          <p>I led <b>end-to-end UX and product design</b>, acting as a strategic partner across product, business, and engineering teams. Key responsibilities included:</p>
+          <ul class="bullets">
+            <li>Diagnosing dealer pain points and prioritising needs across internal and external systems.</li>
+            <li>Designing workflows and dashboards that simplified complex relationships between accounts, groups, and dealers.</li>
+            <li>Leading Stock Management, One Dealer Centre, and Backoffice stabilisation projects.</li>
+            <li>Integrating data and workflows across eBay, Gumtree, Dealer Centre Stock/Response, MCU backends, SSO services, and Data Warehouse.</li>
+            <li>Building a Design System and unified information architecture for consistent, scalable interfaces.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <img src="..\img\eMG-DC-BeforeAfter.jpg" alt=""></a>
+        <p class="small txt-secondary">Comparison of dealer tools before and after redesign: top shows two separate, disconnected systems with complex navigation; bottom shows the unified platform with simplified, consistent navigation across all tools.</p>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container container-1col narrow">
+        <p class="case-tag">IMPACT</p>
+        <h2>Delivering a Unified, Scalable Platform</h2>
+          <ul class="bullets">
+            <li>Delivered a <b>single, unified management platform</b>, bridging multiple internal and external systems.</li>
+            <li>Simplified workflows for multi-location dealers, <b>improving operational efficiency</b>.</li>
+            <li>Improved usability and performance through <b>15+ moderated user tests</b>, updated stock taxonomy, and simplified navigation.</li>
+            <li>Stabilised onboarding and created a <b>14-page report</b> detailing dealer setup issues and risk mitigation.</li>
+            <li>Enabled <b>ongoing technical and UX improvements</b> in a system rebuild of Dealer Centre tools.</li>
+          </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container container-1col narrow">
+        <p class="case-tag">APPROACH</p>
+        <h2>Understanding Users Across Multiple Platforms</h2>
+        <p>I combined qualitative and quantitative research to understand dealer workflows and pain points across eBay, Gumtree, Motors.co.uk, and internal systems. Methods included:</p>
+          <ul class="bullets">
+            <li>Analytics review from internal databases and Google Analytics to map usage patterns.</li>
+            <li>Heatmaps and Hotjar recordings to identify friction in stock and response flows.</li>
+            <li>Dealer surveys to capture perceptions of Dealer Centre functionality.</li>
+            <li>Interviews with account managers to understand support queries and operational pain points.</li>
+            <li>GAP analysis comparing legacy eMP (eBay/Gumtree) systems with Dealer Centre workflows.</li>
+          </ul>
+
+          <div class="subsection">
+          <h2>Simplifying Multi-System Workflows</h2>
+          <p>Focused on reducing friction in adding, editing, and managing stock across different backends (ColdFusion for Stock, .NET C# for Response). Activities included:</p> 
+          <ul class="bullets">
+            <li>Over 15 moderated user tests with dealers on prototypes (Figma) and legacy tools.</li>
+            <li>Redesigning vehicle description fields and taxonomy to accommodate multiple vehicle types and platform requirements.</li>
+            <li>Designing a scalable architecture for stock management that supports feed and manual dealers, single- and multi-location accounts.</li>
+          </ul>
+
+          <div class="subsection">
+          <h2>Unifying UX Across Merged Systems</h2>
+          <p>Created a single interface bridging Stock and Response, while respecting technical and operational constraints:</p> 
+          <ul class="bullets">
+            <li>Developed a <b>Figma Design System</b> to unify UI elements across React (Response FE) and ColdFusion (Stock FE).</li>
+            <li>Improved information architecture and navigation to <b>reduce cognitive load</b> in multi-system journeys.</li>
+            <li>Conducted moderated and unmoderated tests (usertesting.com, Axure, SUPR-Q) to validate usability and performance.</li>
+            <li>Ensured the unified platform supported multi-level relationships: <b>Accounts / Groups / Dealers</b>, including Salesforce-driven account creation.</li>
+          </ul>
+
+          <div class="subsection">
+          <h2>Stabilising Technical Systems</h2>
+          <p>Worked closely with internal technical teams to improve reliability and reduce operational risk.</p> 
+          <p>Produced a 14-page report detailing dealer setup issues, feeding into BAU improvements and risk mitigation.</p>
+
+          <div class="subsection">
+          <h2>Navigating Constraints and Complexities</h2>
+          <p>Despite a clear vision for a unified platform, the project faced significant challenges and delays.</p> 
+          <p>Integrating multiple legacy systems - each with its own technical constraints, inconsistent data structures, and operational quirks meant progress was slower than hoped. Some workflows had to be redesigned multiple times as new edge cases emerged, and aligning stakeholders across product, engineering, and business teams required extra facilitation and negotiation. These constraints tested both the design and delivery process, but ultimately strengthened the solution: every compromise and iteration informed a platform that was <b>more resilient, scalable, and grounded in real-world operational needs</b>.</p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+        <div class="container">
+            <div class="contact-info">
+                <h2>Let's Talk</h2>
+                <p><img class="icon-before-text" src="../img/icon-email.svg" alt="Email Icon"> contact@klaudia.pro</p>
+                <p><img class="icon-before-text" src="../img/icon-location.svg" alt="Location Icon"> Cheshire, UK</p>
+                <p><a href="https://www.linkedin.com/in/klaudia-rudna-6465a1a2" target="_blank"><img class="LinkedIn" src="../img/icon-linkedin.svg" alt="LinkedIn Icon"></a></p>
+            </div>
+            <p class="small-text">&copy; 2024 Klaudia Rudna. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script> 
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
