@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klaudia Rudna — Product & Service Designer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="img/krlogo.svg">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body id="homepage">
+  <header class="container">
+      <nav class="">
+        <a href="http://klaudia.pro" class="logo"><img src="img\krlogo.svg" alt="Klaudia Rudna" />Klaudia Rudna</a>
+          <div class="burger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="index.html" class="active-page">Case Studies</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero bg-light-gradient">
+        <div class="container">
+            <div class="two-col wide">
+                <div class="col col-wide">
+                    <p class="case-tag">Senior Product & Service Designer</p>
+                    <h1>I help businesses design <span class="txt-highlight">scalable</span>
+                    digital products and systems that deliver measurable
+                    <span class="txt-highlight">results.</span>
+                    </h1>
+                    <a href="#footer" class="cta-primary">Let’s talk about what you need next</a>
+                </div>
+                <div class="col col-narrow">
+                    <img src="img\kr-photo.png" alt="Klaudia Rudna" />
+                </div>
+            </div>
+      </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="logos">
+      <div class="container logo-row">
+        <img src="img/logo-emg.jpg" alt="eBay Motors Group" />
+        <img src="img/logo-unidays.jpg" alt="UNiDAYS" />
+        <img src="img/logo-ycbm.jpg" alt="YouCanBook.me" />
+        <img src="img/logo-motors.jpg" alt="Motors" />
+        <img src="img/logo-reddice.jpg" alt="Red Dice" />
+        <img src="img/logo-rfa.jpg" alt="RFA" />
+        <img src="img/logo-poznanuniversity.jpg" alt="Poznan Life Sciences" />
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="bg-light" id="case-studies">
+      <div class="container case-studies">
+        <article class="case-card" style="--bg: #007e76;">
+          <div class="case-illustration">
+            <img src="img/sb.gif" alt="Case study illustration" />
+          </div>
+          <div class="case-content">
+            <p class="case-tag">CASE STUDY</p>
+            <h2>Created Clarity Across a Complex Service</h2>
+            <p>
+              How I led the creation of a company-wide service blueprint to connect customer experience, systems, and processes - enabling smarter decisions and measurable business value.
+            </p>
+            <p class="case-tag">IMPACT</p>
+            <ul class="bullets">
+              <li><b>70–80%</b> reduction in manual workload, saving up to <b>£200k</b> annually</li>
+              <li><b>1.5–2.5 FTEs</b> (full time employee) worth of capacity freed in the sales team</li>
+              <li><b>28 stakeholders</b> engaged over 6 weeks</li>
+            </ul>
+            <a href="cs/mtrs-sb.html" class="text-link">Enter password to read more →</a>
+          </div>
+        </article>
+
+        <article class="case-card reverse" style="--bg: #04d1bd;">
+          <div class="case-illustration">
+            <img src="img/home.gif" alt="Case study illustration" />
+          </div>
+          <div class="case-content">
+            <p class="case-tag">CASE STUDY</p>
+            <h2>Redefined the App Homepage for Growth</h2>
+            <p>
+              How I redesigned a global student app homepage to boost discovery, repeat visits, and measurable engagement - turning a static entry point into a growth driver.
+            </p>
+            <p class="case-tag">IMPACT</p>
+            <ul class="bullets">
+              <li>+2% Week 1 return rate and +1.98% engagement uplift</li>
+              <li>+352% increase in competition entries</li>
+              <li>Clearer information architecture improving conversion by 18%</li>
+            </ul>
+            <a href="cs/uni-home.html" class="text-link">Enter password to read more →</a>
+          </div>
+        </article>
+
+        <article class="case-card reverse" style="--bg: #58ede1;">
+          <div class="case-illustration">
+            <img src="img/pricing.gif" alt="Case study illustration" />
+          </div>
+          <div class="case-content">
+            <p class="case-tag">CASE STUDY</p>
+            <h2>Designed Clarity for a New Pricing Model</h2>
+            <p>
+              How I used design to bring clarity and speed to a strategically critical pricing initiative - aligning multiple teams around a shared vision in just four weeks.
+            </p>
+            <p class="case-tag">IMPACT</p>
+            <ul class="bullets">
+              <li>Delivered validated <b>MVP direction</b> in <b>under 1 month</b></li>
+              <li>Unified cross-functional team around one <b>shared vision</b></li>
+              <li><b>Reduced</b> rework and <b>ambiguity</b> in later design phases</li>
+            </ul>
+            <a href="cs/mtrs-pricing.html" class="text-link">Enter password to read more →</a>
+          </div>
+        </article>
+
+        <article class="case-card" style="--bg: #008C84;">
+          <div class="case-illustration">
+            <img src="img/dc.png" alt="Case study illustration" />
+          </div>
+          <div class="case-content">
+            <p class="case-tag">CASE STUDY</p>
+            <h2>Simplifying Car Dealer Operations Across Multiple Platforms</h2>
+            <p>
+              How I redesigned dealer tools for a leading automotive brand, unifying fragmented systems into one coherent experience to streamline operations and improve visibility.
+            </p>
+            <p class="case-tag">IMPACT</p>
+            <ul class="bullets">
+              <li>Reduced duplicate processes and manual errors</li>
+              <li>Improved usability and task completion time</li>
+              <li>Created scalable interaction patterns for future features</li>
+            </ul>
+            <a href="cs/mcu-dc.html" class="text-link">Enter password to read more →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container narrow">
+        <h2> Maybe you already have a <span class="txt-highlight">product</span> that works, but not quite how you want it to.
+                    Let’s fix that <span class="txt-highlight">together</span>! </h2>
+        <!-- <a href="#footer" class="cta-primary">Tell me more</a> -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+        <div class="container">
+            <div class="contact-info">
+                <h2>Let's Talk</h2>
+                <p><img class="icon-before-text" src="img\icon-email.svg" alt="Email Icon"> contact@klaudia.pro</p>
+                <p><img class="icon-before-text" src="img\icon-location.svg" alt="Location Icon"> Cheshire, UK</p>
+                <p><a href="https://www.linkedin.com/in/klaudia-rudna-6465a1a2" target="_blank"><img class="LinkedIn" src="img\icon-linkedin.svg" alt="LinkedIn Icon"></a></p>
+            </div>
+            <p class="small-text">&copy; 2024 Klaudia Rudna. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script> 
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
