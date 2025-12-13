@@ -63,31 +63,17 @@
     </section>
 
     <!-- Case Studies -->
-    <section class="bg-light" id="case-studies">
-      <div class="container case-studies">
-        <article class="case-card" style="--bg: #007e76;">
-          <div class="case-illustration">
-            <img src="img/sb.gif" alt="Case study illustration" />
-          </div>
-          <div class="case-content">
-            <p class="case-tag">CASE STUDY</p>
-            <h2>Created Clarity Across a Complex Service</h2>
-            <p>
-              How I led the creation of a company-wide service blueprint to connect customer experience, systems, and processes - enabling smarter decisions and measurable business value.
-            </p>
-            <p class="case-tag">IMPACT</p>
-            <ul class="bullets">
-              <li><b>70–80%</b> reduction in manual workload, saving up to <b>£200k</b> annually</li>
-              <li><b>1.5–2.5 FTEs</b> (full time employee) worth of capacity freed in the sales team</li>
-              <li><b>28 stakeholders</b> engaged over 6 weeks</li>
-            </ul>
-            <a href="cs/mtrs-sb.html" class="text-link">Enter password to read more →</a>
-          </div>
-        </article>
 
-        <article class="case-card reverse" style="--bg: #04d1bd;">
+    <section class="bg-light-gradient-reverse" id="case-studies">
+
+      <div class="container case-studies">
+            
+        <article class="case-card">
           <div class="case-illustration">
-            <img src="img/home.gif" alt="Case study illustration" />
+            <video muted playsinline>
+              <source src="img/uni-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div class="case-content">
             <p class="case-tag">CASE STUDY</p>
@@ -105,29 +91,35 @@
           </div>
         </article>
 
-        <article class="case-card reverse" style="--bg: #58ede1;">
-          <div class="case-illustration">
-            <img src="img/pricing.gif" alt="Case study illustration" />
-          </div>
+        <article class="case-card  reverse">
           <div class="case-content">
             <p class="case-tag">CASE STUDY</p>
-            <h2>Designed Clarity for a New Pricing Model</h2>
+            <h2>Created Clarity Across a Complex Service</h2>
             <p>
-              How I used design to bring clarity and speed to a strategically critical pricing initiative - aligning multiple teams around a shared vision in just four weeks.
+              How I led the creation of a company-wide service blueprint to connect customer experience, systems, and processes - enabling smarter decisions and measurable business value.
             </p>
             <p class="case-tag">IMPACT</p>
             <ul class="bullets">
-              <li>Delivered validated <b>MVP direction</b> in <b>under 1 month</b></li>
-              <li>Unified cross-functional team around one <b>shared vision</b></li>
-              <li><b>Reduced</b> rework and <b>ambiguity</b> in later design phases</li>
+              <li>70–80% reduction in manual workload, saving up to £200k annually</li>
+              <li>1.5–2.5 FTEs (full time employee) worth of capacity freed in the sales team</li>
+              <li>28 stakeholders engaged over 6 weeks</li>
             </ul>
-            <a href="cs/mtrs-pricing.html" class="text-link">Enter password to read more →</a>
+            <a href="cs/mtrs-sb.html" class="text-link">Enter password to read more →</a>
+          </div>
+          <div class="case-illustration">
+            <video muted playsinline>
+              <source src="img/service-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </article>
 
-        <article class="case-card" style="--bg: #008C84;">
+        <article class="case-card">
           <div class="case-illustration">
-            <img src="img/dc.png" alt="Case study illustration" />
+            <video muted playsinline>
+              <source src="img/dc-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div class="case-content">
             <p class="case-tag">CASE STUDY</p>
@@ -145,15 +137,40 @@
           </div>
         </article>
 
+
+        <article class="case-card reverse">
+          <div class="case-content">
+            <p class="case-tag">CASE STUDY</p>
+            <h2>Designed Clarity for a New Pricing Model</h2>
+            <p>
+              How I used design to bring clarity and speed to a strategically critical pricing initiative - aligning multiple teams around a shared vision in just four weeks.
+            </p>
+            <p class="case-tag">IMPACT</p>
+            <ul class="bullets">
+              <li>Delivered validated MVP direction in under 1 month</li>
+              <li>Unified cross-functional team around one shared vision</li>
+              <li>Reduced rework and ambiguity in later design phases</li>
+            </ul>
+            <a href="cs/mtrs-pricing.html" class="text-link">Enter password to read more →</a>
+          </div>
+          <div class="case-illustration">
+            <video muted playsinline>
+              <source src="img/pricing-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </article>
+
+        
+
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="section">
-      <div class="container narrow">
-        <h2> Maybe you already have a <span class="txt-highlight">product</span> that works, but not quite how you want it to.
-                    Let’s fix that <span class="txt-highlight">together</span>! </h2>
-        <!-- <a href="#footer" class="cta-primary">Tell me more</a> -->
+    <section class="section bg-vivid-gradient">
+      <div class="container narrow centre">
+        <h2> Quick to onboard, focused on outcomes, working with your team every step of the way.</h2>
+        <a href="https://calendly.com/designmetrics-studio/30min" class="cta-primary" target="_blank" rel="noopener noreferrer">Book a free call</a>
       </div>
     </section>
   </main>
@@ -176,6 +193,45 @@
             document.querySelector("nav ul").classList.toggle("active");
         }
     </script>
+
+    <script>
+    // Video autoplay on scroll - plays only once
+    const videos = document.querySelectorAll('video');
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    };
+
+    videos.forEach(video => {
+      let hasPlayed = false;
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !hasPlayed) {
+            video.play().then(() => {
+              hasPlayed = true;
+              observer.unobserve(video);
+            }).catch(err => {
+              console.log('Autoplay prevented:', err);
+            });
+          }
+        });
+      }, observerOptions);
+
+      observer.observe(video);
+
+      // Fallback: play on user interaction
+      video.addEventListener('click', () => {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
