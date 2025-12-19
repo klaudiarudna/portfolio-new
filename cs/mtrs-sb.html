@@ -49,11 +49,11 @@
     if (attemptsStored) attempts = parseInt(attemptsStored, 10) || 0;
 
     while (attempts < MAX_ATTEMPTS) {
-      const input = prompt("Enter password to view this page:");
+      const input = prompt("This case study is password-protected to respect client confidentiality. You'll find the password in my CV, or feel free to message me on LinkedIn to request access.");
 
       // If user cancelled the prompt, treat as failed and redirect.
       if (input === null) {
-        alert("No password entered. Redirecting to home page.");
+        alert("No password entered. Let's try that again.");
         window.location.href = "http://klaudiarudna.com";
         return;
       }
@@ -69,12 +69,12 @@
       } else {
         attempts += 1;
         sessionStorage.setItem(ACCESS_KEY + "-attempts", String(attempts));
-        alert("Incorrect password. Attempts: " + attempts + " / " + MAX_ATTEMPTS);
+        alert("Hmm, that's not quite right. Give it another go.");
       }
     }
 
     // too many fails -> redirect
-    alert("Too many incorrect attempts. Redirecting to home page.");
+    alert("Multiple incorrect attempts. Need the password? Check my CV or message me on LinkedIn.");
     window.location.href = "http://klaudiarudna.com";
   })();
 </script>
@@ -116,7 +116,7 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="hero bg-light-gradient">
+    <section class="section hero bg-light-gradient">
       <div class="container">
           <p class="case-tag">CASE STUDY</p>
           <h1 class="hero-title">Service Blueprint: From Fragmented Processes to Strategic Clarity</h1>
