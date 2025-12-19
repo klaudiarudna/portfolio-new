@@ -30,6 +30,13 @@
 </head>
 
 <body id="homepage">
+  <div class="hero">
+    <div class="mesh-bg">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+        <div class="blob blob4"></div>
+    </div>
   <header class="container">
       <nav class="">
         <a href="http://klaudiarudna.com" class="logo"><img src="img\krlogo.svg" alt="Klaudia Rudna" />Klaudia Rudna</a>
@@ -39,8 +46,8 @@
             <div></div>
         </div>
         <ul>
-            <li><a href="index.html" class="active-page">Case Studies</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#brand-story">About</a></li>
             <li><a href="#footer">Contact</a></li>
         </ul>
       </nav>
@@ -48,23 +55,16 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="hero bg-light-gradient">
-        <div class="container">
-            <div class="two-col wide">
-                <div class="col col-wide">
-                    <p class="case-tag">Senior Product & Service Designer</p>
-                    <h1>I help businesses design <span class="txt-highlight">scalable</span>
-                    digital products and systems that deliver measurable
-                    <span class="txt-highlight">results.</span>
-                    </h1>
-                    <a href="#footer" class="cta-primary">Let’s talk about what you need next</a>
-                </div>
-                <div class="col col-narrow">
-                    <img src="img\kr-photo.png" alt="Klaudia Rudna" />
-                </div>
-            </div>
+    <section class="section">
+      <div class="container">
+        <p class="case-tag">Senior Product & Service Designer</p>
+        <h1>Scaling but product and team feel misaligned?</h1>
+        <h3 class="">I help growing businesses solve the right problems from strategy to execution - available for contract work.</h3>
+        <a href="#footer" class="cta-primary">Let’s discuss your project</a>
       </div>
     </section>
+  </main>
+</div>
 
     <!-- Client Logos -->
     <section class="logos">
@@ -81,7 +81,7 @@
 
     <!-- Case Studies -->
 
-    <section class="bg-light-gradient-reverse" id="case-studies">
+    <section class="section bg-light" id="case-studies">
 
       <div class="container case-studies">
             
@@ -177,20 +177,52 @@
             </video>
           </div>
         </article>
+      </div>
+    </section>
 
-        
-
+    <section class="section" id="brand-story">
+      <div class="container brand-story">
+        <div class="two-col wide">
+          <div class="col col-narrow">
+            <h2> Hi, I am Klaudia Rudna, Product and Service Designer.</h2>
+            <img src="img\klaudia2.png" alt="Klaudia Rudna" />
+          </div>
+          <div class="col col-wide">
+              <p><span class="b">I partner with growing businesses</span> to design better products and services by <span class="b">aligning customer experience, team workflows, and digital systems</span>, so they can scale with confidence.</p>
+              <p>I started in finance and moved into design in <span class="b">2008, launching a freelance practice</span> focused on websites and visual identities for small businesses. </p>
+              <p>The turning point came when a client's flash-based navigation made it impossible for delivery drivers to find their location on mobile. Beautiful design - broken experience. That moment shifted everything. I moved from pushing pixels to <span class="b">asking deeper questions: What does this actually need to solve? For whom? And what's the simplest way to get there?</span></p>
+              <p>Since then, I've worked across the full design spectrum. Product strategy and service design at the macro level. Interface optimisation at the micro. <span class="b">Technologies evolve, trends shift, but solving meaningful problems stays constant.</span> That is what drives my work and brings me the most satisfaction. So, what problem can I help you solve?</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CTA -->
     <section class="section bg-vivid-gradient">
-      <div class="container narrow centre">
-        <h2> Quick to onboard, focused on outcomes, working with your team every step of the way.</h2>
+      <div class="container">
+        <h2>The impact on your team and business</h2>
+      </div>
+      <div class="container container-3col">
+        <div class="col">
+          <h4>Cultural & operational impact</h4>
+          <p class="quote">“The onboarding team often gets overlooked because they’re not revenue-generating, but what they do is outstanding. The blueprint highlights this complexity and makes their work visible.” <br><span>Sales team member</span></p>
+        </div>
+        <div class="col">
+          <h4>Direct cost & time savings</h4>
+          <p class="quote">“We spent hours trying to figure out why listings weren’t going live. If we’d had a documented journey with stakeholders, we’d have avoided three weeks of confusion and lost sales.”<br><span>Head of Customer Success</span></p></p>
+        </div>
+        <div class="col">
+          <h4>Alignment & Visibility</h4>
+          <p class="quote">"I found out there are some roles in this business I didn’t even know existed"<br><span>Product Manager</span></p></p>
+        </div>
+      </div>
+      <div class="container">
         <a href="https://calendly.com/designmetrics-studio/30min" class="cta-primary" target="_blank" rel="noopener noreferrer">Book a free call</a>
       </div>
     </section>
   </main>
+
+  
 
   <!-- Footer -->
   <footer id="footer">
