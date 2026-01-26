@@ -29,7 +29,7 @@
   </script>
 </head>
 
-<body id="homepage">
+<body id="homepage" data-active-page="">
   <div class="hero">
     <div class="mesh-bg">
         <div class="blob blob1"></div>
@@ -37,21 +37,9 @@
         <div class="blob blob3"></div>
         <div class="blob blob4"></div>
     </div>
-  <header class="container">
-      <nav class="">
-        <a href="http://klaudiarudna.com" class="logo"><img src="img\krlogo.svg" alt="Klaudia Rudna" />Klaudia Rudna</a>
-          <div class="burger-menu" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <ul>
-            <li><a href="#case-studies">Case Studies</a></li>
-            <li><a href="#brand-story">About</a></li>
-            <li><a href="#footer">Contact</a></li>
-        </ul>
-      </nav>
-  </header>
+
+    <!-- Navigation Placeholder -->
+    <div id="nav-placeholder"></div>
 
   <main>
     <!-- Hero Section -->
@@ -104,7 +92,7 @@
               <li>+352% increase in competition entries</li>
               <li>Clearer information architecture improving conversion by 18%</li>
             </ul>
-            <a href="cs/uni-home.html" class="text-link">Enter password to read more →</a>
+            <a href="case-studies/uni-home.html" class="text-link">Enter password to read more →</a>
           </div>
         </article>
 
@@ -121,7 +109,7 @@
               <li>1.5–2.5 FTEs (full time employee) worth of capacity freed in the sales team</li>
               <li>28 stakeholders engaged over 6 weeks</li>
             </ul>
-            <a href="cs/mtrs-sb.html" class="text-link">Enter password to read more →</a>
+            <a href="case-studies/mtrs-sb.html" class="text-link">Enter password to read more →</a>
           </div>
           <div class="case-illustration">
             <video muted playsinline>
@@ -150,7 +138,7 @@
               <li>Improved usability and task completion time</li>
               <li>Created scalable interaction patterns for future features</li>
             </ul>
-            <a href="cs/mcu-dc.html" class="text-link">Enter password to read more →</a>
+            <a href="case-studies/mcu-dc.html" class="text-link">Enter password to read more →</a>
           </div>
         </article>
 
@@ -168,7 +156,7 @@
               <li>Unified cross-functional team around one shared vision</li>
               <li>Reduced rework and ambiguity in later design phases</li>
             </ul>
-            <a href="cs/mtrs-pricing.html" class="text-link">Enter password to read more →</a>
+            <a href="case-studies/mtrs-pricing.html" class="text-link">Enter password to read more →</a>
           </div>
           <div class="case-illustration">
             <video muted playsinline>
@@ -223,19 +211,11 @@
   </main>
 
   
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
 
-  <!-- Footer -->
-  <footer id="footer">
-        <div class="container">
-            <div class="contact-info">
-                <h2>Let's Talk</h2>
-                <p><img class="icon-before-text" src="img\icon-email.svg" alt="Email Icon"> contact@klaudia.pro</p>
-                <p><img class="icon-before-text" src="img\icon-location.svg" alt="Location Icon"> Cheshire, UK</p>
-                <p><a href="https://www.linkedin.com/in/klaudia-rudna-6465a1a2" target="_blank"><img class="LinkedIn" src="img\icon-linkedin.svg" alt="LinkedIn Icon"></a></p>
-            </div>
-            <p class="small-text">&copy; 2024 Klaudia Rudna. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- Load shared components script -->
+  <script src="shared-components.js"></script>
 
     <script> 
         function toggleMenu() {

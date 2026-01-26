@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles - Klaudia Rudna</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="img/krlogo.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Clarity -->
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "uneavc3y4i");
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BST1TNHSHC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BST1TNHSHC');
+  </script>
+</head>
+
+<body data-active-page="articles">
+  
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero bg-light-gradient">
+      <div class="container">
+        <p class="case-tag">INSIGHTS</p>
+        <h1 class="hero-title">Articles</h1>
+        <p class="hero-sub">Subscribe to the free Human-led AI Design newsletter and get practical insight on how AI fits into the design process, straight to your inbox.</p>
+        <a href="https://klaudiarudna.substack.com/subscribe" class="cta-primary" target="_blank" rel="noopener noreferrer">Subscribe to Newsletter</a>
+      </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="content-grid" id="articles-grid">
+          <!-- Articles will be dynamically loaded here -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load shared components script -->
+  <script src="shared-components.js"></script>
+
+  <script>
+    // Article metadata - add new articles here
+    const articles = [
+      
+      {
+        url: 'https://klaudiarudna.substack.com/p/how-i-chose-between-figma-make-lovable?r=6z058x',
+        image: 'img/insights/claude-figma-lovable.jpg',
+        date: '2026-01-26',
+        dateDisplay: 'JAN 26, 2026',
+        topic: 'Tools & Process',
+        title: 'How I Chose Between Figma Make, Lovable, and Claude',
+        excerpt: 'A system-level view on tool choice, portfolio architecture, and where design judgement actually lives when building with AI-assisted prototyping tools.'
+      },
+      {
+        url: 'https://klaudiarudna.substack.com/p/the-30-minute-interview-to-insight?r=6z058x',
+        image: 'img/insights/interview-to-insight.jpg',
+        date: '2026-01-17',
+        dateDisplay: 'JAN 17, 2025',
+        topic: 'User Research',
+        title: 'The 30-Minute Interview to Insight Engine',
+        excerpt: 'Turn small-sample interviews into defensible decisions. A disciplined framework for extracting actionable insights from 3-6 discovery interviews without losing nuance.'
+      },
+      {
+        url: 'https://klaudiarudna.substack.com/p/the-question-behind-how-do-you-use?r=6z058x',
+        image: 'img/insights/AI-in-process-question.jpg',
+        date: '2026-01-09',
+        dateDisplay: 'JAN 9, 2026',
+        topic: 'AI & Design',
+        title: 'The Question Behind "How Do You Use AI in Your Design Process?"',
+        excerpt: 'How to communicate your AI use in interviews and showcase structured design thinking. Learn to emphasise judgement, impact, and strategic thinking over tools.'
+      }
+    ];
+
+    // Sort articles by date (most recent first)
+    articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Generate article cards
+    function loadArticles() {
+      const grid = document.getElementById('articles-grid');
+      
+      articles.forEach(article => {
+        const card = document.createElement('article');
+        card.className = 'content-card';
+        
+        // Check if link is external
+        const isExternal = article.url.startsWith('http://') || article.url.startsWith('https://');
+        const targetAttr = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+        
+        card.innerHTML = `
+          <a href="${article.url}"${targetAttr}>
+            <img src="${article.image}" alt="${article.title}">
+            <div class="content-card-body">
+              <p class="case-tag">${article.topic} • ${article.dateDisplay}</p>
+              <h2>${article.title}</h2>
+              <p>${article.excerpt}</p>
+              <span class="text-link">Read article →</span>
+            </div>
+          </a>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Load articles when DOM is ready
+    document.addEventListener('DOMContentLoaded', loadArticles);
+
+    function toggleMenu() {
+      document.querySelector("nav ul").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
