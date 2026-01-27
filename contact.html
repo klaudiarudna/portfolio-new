@@ -60,6 +60,7 @@
                     name="name" 
                     required
                 >
+                <div id="nameError" class="error-message"></div>
             </div>
             
             <div class="form-group">
@@ -70,6 +71,7 @@
                     name="email" 
                     required
                 >
+                <div id="emailError" class="error-message"></div>
             </div>
             
             <div class="form-group">
@@ -80,6 +82,7 @@
                     name="organisation" 
                     required
                 >
+                <div id="organisationError" class="error-message"></div>
             </div>
             
             <div class="form-group">
@@ -90,12 +93,14 @@
                     rows="5" 
                     required
                 ></textarea>
+                <div id="messageError" class="error-message"></div>
             </div>
             
             <button type="submit" id="submitBtn" class="cta-primary">Send Message</button>
         </form>
 
-
+        <div id="formStatus" class="form-status"></div>
+        
         <div class="contact-info-section">
           
           <h3>Prefer email?</h3>

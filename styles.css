@@ -444,6 +444,11 @@ nav {
    CONTACT FORM
    ============================================ */
 
+/* Form group and labels */
+.form-group {
+  margin-bottom: 8px;
+}
+
 .form-group label {
   display: block;
   font-weight: 500;
@@ -455,6 +460,7 @@ nav {
   color: var(--color-brand-primary);
 }
 
+/* Form inputs and textarea */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
@@ -469,6 +475,7 @@ nav {
   background: var(--color-bg-alt);
 }
 
+/* Focus states */
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
 .form-group textarea:focus {
@@ -476,11 +483,15 @@ nav {
   border-color: var(--color-brand-primary);
 }
 
+/* Error states - consolidated (removed duplicate) */
 .form-group input.error,
-.form-group textarea.error {
-  border-color: #D32F2F;
+.form-group textarea.error,
+input.error,
+textarea.error {
+  border-color: #D32F2F !important;
 }
 
+/* Error messages - consolidated (removed duplicate) */
 .error-message {
   display: block;
   color: #D32F2F;
@@ -489,12 +500,51 @@ nav {
   min-height: 20px;
 }
 
-.contact-form .cta-primary {
+/* Form status messages */
+.form-status {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  display: none;
+  font-size: 16px;
+}
+
+.form-status.success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  display: block;
+}
+
+.form-status.error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  display: block;
+}
+
+.form-status.loading {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+  display: block;
+}
+
+/* Submit button */
+#submitBtn {
   margin-top: 8px;
   cursor: pointer;
   border: none;
 }
 
+button:disabled,
+.cta-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Contact info section */
 .contact-info-section {
   padding-top: 48px;
   border-top: 1px solid var(--color-border);
@@ -518,6 +568,7 @@ nav {
   color: var(--color-link-hover);
 }
 
+/* Policies section */
 .policies-section {
   padding-top: 32px;
   border-top: 1px solid var(--color-border);
