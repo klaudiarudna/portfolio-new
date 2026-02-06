@@ -73,6 +73,8 @@ h1, .h1 {
   line-height: 120%;
   letter-spacing: -0.5%;
   font-weight: 500;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 
 h2, .h2 {
@@ -942,6 +944,13 @@ button:disabled,
   gap: 8px;
 }
 
+/*.services-hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 16px 0;
+}*/
+
 /* ============================================
    CONTENT GRID (Articles & Videos Listing)
    ============================================ */
@@ -969,7 +978,7 @@ button:disabled,
 
 .content-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 140, 132, 0.15);
 }
 
 .content-card a {
@@ -980,7 +989,7 @@ button:disabled,
 
 .content-card img {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
 }
 
