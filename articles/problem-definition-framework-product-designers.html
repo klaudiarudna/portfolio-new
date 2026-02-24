@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Define the Right Problem Before You Design the Wrong Solution | Klaudia Rudna</title>
+  <meta name="description" content="A step-by-step framework for product designers to interrogate a brief, uncover the real root cause, translate business metrics into designable problems, and align stakeholders before a single pixel moves." />
+  <meta name="keywords" content="problem definition UX, design problem framing, root cause analysis design, how might we UX, problem statement product design, UX problem solving framework, product designer process, design thinking problem framing" />
+  <meta name="author" content="Klaudia Rudna" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Define the Right Problem Before You Design the Wrong Solution" />
+  <meta property="og:description" content="A step-by-step framework for product designers to uncover root causes, translate business metrics into designable problems, and align stakeholders before a single pixel moves." />
+  <meta property="og:url" content="https://klaudiarudna.com/articles/problem-definition-framework-product-designers.html" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Define the Right Problem Before You Design the Wrong Solution" />
+  <meta name="twitter:description" content="Stop designing the wrong thing. A practical framework for getting to the real problem before you start." />
+  
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" type="image/png" href="../img/krlogo.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Clarity -->
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "uneavc3y4i");
+  </script>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BST1TNHSHC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BST1TNHSHC');
+  </script>
+  
+  <!-- Schema.org markup for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Define the Right Problem Before You Design the Wrong Solution",
+    "description": "A step-by-step framework for product designers to interrogate a brief, uncover the real root cause, translate business metrics into designable problems, and align stakeholders before a single pixel moves.",
+    "author": {
+      "@type": "Person",
+      "name": "Klaudia Rudna"
+    },
+    "datePublished": "2026-02-24",
+    "dateModified": "2026-02-24",
+    "keywords": "problem definition UX, design problem framing, root cause analysis design, how might we UX, problem statement product design, design thinking"
+  }
+  </script>
+</head>
+
+<body data-active-page="articles">
+  
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <main>
+    <!-- Article Content -->
+    <section class="section">
+      <div class="container article-layout">
+        
+        <!-- Main Content Column -->
+        <article class="article-main">
+          <p class="case-tag">FEB 24, 2026</p>
+          <h1>How to Define the Right Problem Before You Design the Wrong Solution</h1>
+          
+          <div class="article-summary">
+            <p><strong class="text-highlight">Summary:</strong> As a product designer, you're often handed a brief that's really a symptom in disguise. When the problem definition is wrong, the design solution, no matter how well crafted, solves the wrong thing. This article shares a step-by-step framework for interrogating a brief - working back to the real root cause, reframing business metrics into something designable, and bringing stakeholders with you.</p>
+          </div>
+
+          <img src="../img/insights/problem-definition.jpg" alt="Asking Why can help discover root cause of the problem" class="article-hero-img">
+          <p class="img-caption">Image generated with Gemini</p>
+
+          <p>Picture this. You've been handed a problem. Maybe it arrived as a feature request, a dropped metric, or a one-liner from a stakeholder: "Users aren't converting", or  "We need to improve engagement."</p>
+
+          <p>You're expected to design a solution. But something feels off. The brief is thin. The "problem" sounds like a symptom, or it's framed entirely in business terms, e.g. a number that isn't moving, with no indication of what's actually happening for users. Sounds familiar?</p>
+
+          <p>This situation we as designers complain about constantly. When the problem definition is wrong, the design solution, no matter how well crafted, solves the wrong thing. The work ships, the metric barely moves, and nobody quite understands why, or they blame the solution.</p>
+
+          <p>Framing the problem is one of those things AI can assist with, but can't do better than a human. It lacks the organisational context, the politics, the ability to read what's unsaid in a room, and the judgment to know which assumption is the one worth challenging.</p>
+
+          <p>Do you have a clear process for what to do next? How do you push back without appearing obstructive? How do you reframe a business metric into something you can actually design toward? How do you get stakeholder agreement on what you're really solving?</p>
+
+          <p>In this article, I am sharing my step-by-step framework for exactly that situation. It's designed for designers who've been handed a problem and need to interrogate it - working back to the real root cause, reframing it in an actionable way, and bringing the business with them.</p>
+
+          <h2 id="symptom">Recognise whether you've been handed a problem or a symptom</h2>
+
+          <p>The first thing to do when you receive a brief is ask: Is this actually a problem, or is it evidence that a problem exists somewhere underneath?</p>
+
+          <p>Symptoms are observable. They show up in data, in complaints, in things users do or don't do. They're real and worth taking seriously, but treating them as the problem leads teams toward surface fixes that don't hold.</p>
+
+          <p>Here's an example from my own work. An app homepage was flagged for poor performance. Users weren't scrolling; they went straight to search instead. The symptom was clear. The instinct was to fix the homepage - make it more engaging, improve the visual hierarchy, reward the scroll.</p>
+
+          <p>But when we looked harder, the scroll behaviour wasn't the problem. Users went to search because they already knew what they wanted. The homepage wasn't offering them anything beyond that. And critically, they weren't coming back to the app at all. The root cause was low discoverability. There was nothing to surface content users didn't know to look for, no reason to browse, no pull toward returning.</p>
+
+          <p>What we fixed wasn't the scroll behaviour. It was the navigation, information architecture, and homepage layout. The scroll improved as a consequence, not a goal.</p>
+
+          <p>If the brief had been accepted as written - "the homepage isn't performing", the solution would have been a redesign aimed at scroll engagement. It would have looked reasonable and shipped cleanly. And it almost certainly wouldn't have moved retention.</p>
+
+          <p><strong>The question to ask at this stage:</strong> Is what you've been given a problem, or is it the evidence that a problem exists somewhere underneath?</p>
+
+          <h2 id="why-chain">If it's a symptom - start a why chain</h2>
+
+          <p>When a brief feels shallow, the tool I find very practical is the 5 Whys Root Cause Analysis. Take the problem as stated, ask why it's happening, take that answer, and ask why again. Repeat until you reach something structurally true - a cause that, if addressed, would prevent the problem from recurring rather than just treating this instance of it.</p>
+
+          <p>Using the homepage example:</p>
+
+          <p>The homepage isn't working. <strong>Why?</strong> Users don't scroll; they go straight to search for a specific thing they are looking for and don't come back again. <strong>Why?</strong> Users don't develop a habit of coming back. <strong>Why?</strong> The homepage offers nothing they didn't already know to look for so they don't see value in coming back. <strong>Why?</strong> The original brief focused on navigation efficiency, not content discovery.</p>
+
+          <p>Root cause: a design assumption about user behaviour that was never validated. The fix needs to address discoverability architecturally, not just visually.</p>
+
+          <p>When to stop the why-chain? You've likely reached a structural cause when the answer shifts from behaviour to assumption or system design, fixing it would prevent similar problems in adjacent areas, or it requires cross-functional change.</p>
+
+          <p>A few things to watch for when running this analysis:</p>
+
+          <ul class="bullets">
+            <li><strong>The first answer is rarely the root cause.</strong> It's usually the symptom restated in slightly different language. Push past it.</li>
+            <li><strong>Different people will reach different roots.</strong> This is information, not failure. If your engineer's chain leads to a technical constraint and your product manager's leads to a strategic assumption, you may have two contributing causes worth exploring separately and a conversation worth having before anyone starts designing.</li>
+            <li><strong>Some causes are immeasurable, but still real.</strong> Process breakdowns, unclear ownership, misaligned incentives - these won't surface cleanly in data, but they'll appear in the why-chain if you're honest. Don't discard them because they're hard to quantify.</li>
+          </ul>
+
+          <p>Add a final question beyond the chain: <em>Why does this matter to the people affected?</em> This keeps the analysis human before you move into solution space.</p>
+
+          <h2 id="metrics">If it's a business metric - translate it into a designable problem</h2>
+
+          <p>A common version of the "handed a problem" situation is when the problem is framed entirely as a business outcome: "Conversion is down 15%", "Churn is up".</p>
+
+          <p>These are real problems for the business, but they're not problems a designer can directly solve. They're outcomes produced by many variables, only some of which design can influence.</p>
+
+          <p>The work here is translation: moving from a metric that isn't moving to a specific human situation that's causing it, that design can actually address.</p>
+
+          <p>The question to ask is: <em>what is happening for users that's producing this outcome?</em></p>
+
+          <p>"Conversion is down 15%" could mean:</p>
+
+          <ul class="bullets">
+            <li>Users don't understand what they're signing up for (a clarity and messaging problem)</li>
+            <li>The flow introduces friction at a decision point (a usability problem)</li>
+            <li>Users don't trust the product enough to commit (a trust problem)</li>
+            <li>The offer isn't compelling relative to alternatives (a value proposition problem)</li>
+          </ul>
+
+          <p>Each of these is a different problem, pointing to a different solution space.</p>
+
+          <p>This translation is also how you have the conversation with stakeholders. You're not dismissing the metric. You're asking what's producing it: "We know conversion is down 15%.  Before we decide how to respond, can we agree on what's actually happening for users at that point?" That's not obstruction. That's the thoroughness the business should want.</p>
+
+          <p>Once you have a hypothesis about the human cause, you can write a problem statement that's actionable and test that hypothesis before committing to a solution direction.</p>
+
+          <h2 id="locate">Locate where the problem lives</h2>
+
+          <p>Before moving to solutions, it's worth asking: where does this problem actually sit in the system?</p>
+
+          <p>Is it a <strong>usability issue</strong> - something about how the interface works that creates friction or confusion? Is it a <strong>value issue</strong> - users don't see enough reason to engage? A <strong>messaging issue</strong> - they don't understand what they're getting? A <strong>trust issue</strong> - they're hesitant for reasons that have nothing to do with the UI? Or is it a <strong>process or system issue</strong> - something that lives upstream of the user interface entirely?</p>
+
+          <p>Each of these points toward a different solution and a different group of people who need to be involved.</p>
+
+          <p>Another way to think about it, which I find helpful, is more <strong>vertical</strong>: Is it an interface level? Journey level? Product strategy level? Organisational/process level? Market level?</p>
+
+          <p>Some problems live not an one but multiple levels. Ask: What is within design's influence? What sits outside it? Avoid this common trap - don't accept accountability for systemic issues you don't control.</p>
+
+          <p>This is also where the user-versus-business framing becomes less useful than it first appears. The honest answer to "is this a user problem or a business problem?" is almost always: <strong>it's both, and the interesting work is understanding how they connect.</strong></p>
+
+          <p>Low discoverability is a user experience problem. It's also a retention problem and a revenue problem. Naming it as both and being specific about the consequences on each side is how you build shared ownership across teams that otherwise see themselves as solving different things.</p>
+
+          <h2 id="problem-statement">Write a problem statement that holds up</h2>
+
+          <p>A problem statement is a single sentence that names what the team is actually solving. Its job is alignment - something everyone can point to, push back on, and test decisions against.</p>
+
+          <p>The classic structure:</p>
+
+          <p><em>[Who] needs a way to [achieve what] because of [insight], but [barrier].</em></p>
+
+          <p>Two things tend to go wrong when writing it:</p>
+
+          <p><strong>Writing a symptom instead of a problem.</strong> <em>"Users aren't scrolling the homepage"</em> describes what's observable, not what's wrong. Push the sentence further: why does the scroll behaviour matter, and what does it cost?</p>
+
+          <p><strong>Embedding a solution.</strong> <em>"We need to redesign the homepage so users discover more content"</em> has already decided the solution (redesign) and the mechanism (discovery via homepage). A real problem statement keeps the solution space open: <em>"New users leave the app after their first session and don't return, because the app doesn't give them a reason to come back beyond what they already searched for"</em> - that's a problem. How you solve it is still an open question.</p>
+
+          <p><strong>Framing it for business stakeholders:</strong> a problem statement lands differently depending on how it connects to consequence. <em>"Users aren't engaging with the homepage"</em> is a design observation. <em>"Users who don't return in week one have a 70% churn rate, and we're losing them on day three"</em> is a business problem with a design component. The information is the same. The framing determines whether the business has a reason to care.</p>
+
+          <p>Sometimes a single sentence is enough to align a team and move. But when a problem is complex, cross-functional, or carries assumptions the team hasn't yet tested, one sentence won't hold everything that matters.</p>
+
+          <h2 id="full-form">Use the full form when alignment is genuinely at risk</h2>
+
+          <p>When a problem is complex or involves multiple functions, a problem statement alone won't carry the weight. The form below creates shared clarity that a single sentence can't.</p>
+
+          <p>How to use it? One person can fill it in as a thinking tool and share it for feedback. Or you can ask stakeholders to fill it in independently, before discussing it together.</p>
+          <BR>
+
+          <p><strong>--- FORM ---</strong></p>
+
+          <p><strong>Problem title</strong><br>
+          A short label, not a solution, not a feature name. A description of the situation.<br>
+          <em>Example: Low app return rate after first visit</em></p>
+
+          <p><strong>Who is affected</strong><br>
+          Be specific. Which users, in which context, at which point in their experience?<br>
+          <em>Example: New users who complete their first session but don't return within 7 days</em></p>
+
+          <p><strong>What's happening (the symptom)</strong><br>
+          Describe what you can observe in behaviour, in data, or through direct feedback. This is evidence that a problem exists, not the problem itself.<br>
+          <em>Example: Users navigate directly to search, don't scroll the homepage, and don't return after their first session</em></p>
+
+          <p><strong>What we believe is the root cause</strong><br>
+          Your best current explanation for why this is happening. Be honest about how confident you are. Add confidence level (Low / Medium / High). Low confidence root causes should not lead to high-investment solutions.<br>
+          <em>Example: The homepage is designed for navigation to known content, not discovery of new content. Users have no visible reason to explore beyond what they already know to look for. Confidence: High</em></p>
+
+          <p><strong>The evidence we have</strong><br>
+          What data, research, or direct input supports this? Note where you're relying on an assumption rather than evidence.<br>
+          <em>Example: Analytics show 80% of first-session users go straight to search. Exit surveys mention "didn't find anything new." No qualitative research yet on why users don't return.</em></p>
+
+          <p><strong>Is this a user problem, a business problem, or both?</strong><br>
+          Where does it live? What's the consequence for each side?<br>
+          <em>Example: User problem - low discoverability means the app offers no value beyond the immediate search task. Business problem - low return rate drives down retention and lifetime value.</em></p>
+
+          <p><strong>Business impact</strong><br>
+          What happens if this isn't solved? Quantify where possible.<br>
+          <em>Example: Users who don't return in week 1 have a 70% churn rate. The current 7-day return rate is 22%.</em></p>
+
+          <p><strong>What we are NOT solving</strong><br>
+          Deliberate exclusions. Scope creep usually enters through what wasn't said. This field forces the conversation. Encourage explicit trade-offs: What are we choosing not to optimise? What metric might temporarily worsen? What risks are we accepting?<br>
+          <em>Example: We are not redesigning the search experience or core navigation. We are not addressing users who churn after extended use.</em></p>
+
+          <p><strong>Assumptions we're carrying</strong><br>
+          What do we believe that we haven't yet confirmed? What would change the diagnosis if it turned out to be wrong?<br>
+          <em>Example: We assume a low return rate is driven by poor discoverability, not a fundamental value proposition mismatch. If user interviews suggest the latter, the scope changes significantly.</em></p>
+
+          <p><strong>How Might We reframe</strong><br>
+          Translate the problem into an open question that invites solutions without prescribing them.<br>
+          <em>Example: How might we help users discover content they didn't know to look for, so the app feels worth returning to?</em></p>
+
+          <p><strong>--- end of form ---</strong></p>
+          <br>
+
+          <h2 id="hmw">Reframe for action with a How Might We question</h2>
+
+          <p>Once you have a root cause you trust, the How Might We question is the bridge from diagnosis to design. It translates what's wrong into an open question that invites solutions without prescribing them.</p>
+
+          <p>"How might we" is not just a reworded problem statement. It's a deliberate shift from <em>what went wrong to what could be different.</em></p>
+
+          <p><strong>"How"</strong> signals that a solution exists and is worth looking for. <strong>"Might"</strong> keeps the question open - no specific answer presupposed. <strong>"We"</strong> makes it collective - not a brief handed to one function.</p>
+
+          <p><em>How might we help users discover content they didn't know to look for, so the app feels worth returning to?</em></p>
+
+          <p>The test: if the question implies a specific solution, it's too narrow. If it could apply to almost any product challenge, it's too broad.</p>
+
+          <p>This is also the form of the question that tends to land well in stakeholder conversations. It signals that the design team has understood the problem and is now inviting collective input on how to respond rather than presenting a solution that the business is asked to approve.</p>
+
+          <h2 id="watch-out">What to watch out for</h2>
+
+          <p><strong>Treating the form as a box-ticking exercise.</strong> The value of a problem statement or a root cause analysis isn't the artefact - it's the thinking it forces. If the form gets filled in after the solution has already been decided, it's a rationalisation, not a definition. The questions need to be asked before answers are assumed.</p>
+
+          <p><strong>Stopping at the first plausible answer.</strong> In a root cause analysis, especially the first answer that feels satisfying is usually not the root cause. It's the symptom restated as an explanation. Keep pushing until the answer points to something structural, not situational.</p>
+
+          <p><strong>Letting assumptions travel as facts.</strong> Building the habit of separating what we know from what we think we know is one of the most practical things a design-minded person can bring to a business conversation. I once joined a business where some of those assumptions were hidden under "general business knowledge". When I digged dipper, it was based on research done years earlier in a very specific context and never questioned again.</p>
+
+          <p>My recommendation is this: whenever you write a problem statement or present a root cause, annotate. Is this <em>evidence</em> - data, direct user input, observed behaviour? Or is it a <em>hypothesis</em> - something believed to be true but not yet tested?</p>
+
+          <p>Even doing this verbally, "this next part is an assumption we haven't confirmed," changes the quality of the conversation. It doesn't slow you down - it prevents you from building in the wrong direction at speed. The right moment is before the team commits to a direction, not after.</p>
+
+          <p><strong>Writing a problem statement that's really a solution in disguise.</strong> "We need to redesign X so that Y" is a brief, not a problem. Keep the solution space open until you've earned the right to close it.</p>
+
+          <p><strong>Letting the loudest voice define the problem.</strong> Problem definition in a team setting is a political act as much as an analytical one. Having stakeholders fill in the form independently before comparing responses is one of the most effective ways to surface real disagreements early, before they become expensive.</p>
+
+          <h2 id="conversation">The conversation this makes possible</h2>
+
+          <p>When you're handed a brief that feels thin, the steps are consistent: recognise whether you have a problem or a symptom, run the why-chain until you reach something structurally true, translate business metrics into human situations, write a problem statement that describes the situation without prescribing the solution, and use the full form when alignment is genuinely at risk.</p>
+
+          <p>Throughout: name your assumptions before they travel as facts. Push past the first plausible answer. Don't let the loudest voice define the problem by default.</p>
+
+          <p>The reward is bigger than a better brief. Solving the right problem is what moves the metric - the difference between work that ships and work that changes behaviour. It's also how design stops being perceived as pixel-pushing and starts being understood as a business capability. Not by claiming a seat at the table, but by showing up at the problem definition stage with reasoning the business can actually engage with.</p>
+
+          <wbr>
+
+          <p><em>If your organisation is moving toward AI or automation, the way these questions surface changes. I write about that in the next article.<a href="https://klaudiarudna.substack.com/subscribe" class="text-link" target="blank">Subscribe</a> to get more insights like this straight to your inbox.</em></p>
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="article-sidebar">
+          
+          <!-- Table of Contents -->
+          <div class="sidebar-section">
+            <h3>In this Article</h3>
+            <ul class="toc-list">
+              <li><a href="#symptom">Problem or symptom?</a></li>
+              <li><a href="#why-chain">Start a why chain</a></li>
+              <li><a href="#metrics">Translate business metrics</a></li>
+              <li><a href="#locate">Locate where the problem lives</a></li>
+              <li><a href="#problem-statement">Write a problem statement</a></li>
+              <li><a href="#full-form">Use the full form</a></li>
+              <li><a href="#hmw">How Might We question</a></li>
+              <li><a href="#watch-out">What to watch out for</a></li>
+              <li><a href="#conversation">The conversation this makes possible</a></li>
+            </ul>
+          </div>
+
+          <!-- Related Services -->
+          <div class="sidebar-section">
+            <h3>Related services</h3>
+            <ul class="related-list">
+              <li><a href="../services/digital-product-design-sprint.html">Digital Product Design Sprint</a></li>
+            </ul>
+          </div>
+
+          <!-- Related Insights -->
+          <div class="sidebar-section">
+            <h3>You may also like</h3>
+            <ul class="related-list">
+              <li><a href="../articles/designer-guide-roi-metrics.html">How Designers Can Successfully Use ROI Metrics to Greenlight Projects</a></li>
+            </ul>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load shared components script -->
+  <script src="../shared-components.js"></script>
+
+  <script> 
+    function toggleMenu() {
+      document.querySelector("nav ul").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
