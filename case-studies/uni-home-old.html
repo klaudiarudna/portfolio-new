@@ -7,7 +7,77 @@
   <link rel="stylesheet" href="../styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../img/krlogo.svg">
+  <script>
+ const SALT = "somesalt123";
+  const STORED_HASH_BASE64 = "j7tF++JuruDAWZbDEgqcwcTYvD4mN+pdXq9Vh9av/9Q=";
 
+  // sessionStorage key we set when access is granted (we store a token, not the password)
+  const ACCESS_KEY = "caseStudyAccess";
+  const ACCESS_TOKEN = "granted-v1";
+
+  // max attempts before redirect
+  const MAX_ATTEMPTS = 3;
+
+  // helper: convert ArrayBuffer to Base64
+  function arrayBufferToBase64(buffer) {
+    const bytes = new Uint8Array(buffer);
+    let binary = "";
+    for (let i = 0; i < bytes.byteLength; i++) {
+      binary += String.fromCharCode(bytes[i]);
+    }
+    return btoa(binary);
+  }
+
+  // compute SHA-256(salt + password) and return Base64 string
+  async function computeSaltedHashBase64(salt, password) {
+    const enc = new TextEncoder();
+    const data = enc.encode(salt + password);
+    const digest = await crypto.subtle.digest("SHA-256", data);
+    return arrayBufferToBase64(digest);
+  }
+
+  // main check routine (runs on page load)
+  (async function checkAccess() {
+    // If already granted in this session — skip prompt
+    if (sessionStorage.getItem(ACCESS_KEY) === ACCESS_TOKEN) {
+      return; // allowed to view
+    }
+
+    let attempts = 0;
+    // try to read stored attempt count (so refresh loses attempts? up to you)
+    const attemptsStored = sessionStorage.getItem(ACCESS_KEY + "-attempts");
+    if (attemptsStored) attempts = parseInt(attemptsStored, 10) || 0;
+
+    while (attempts < MAX_ATTEMPTS) {
+      const input = prompt("This case study is password-protected to respect client confidentiality. You'll find the password in my CV, or feel free to message me on LinkedIn to request access.");
+
+      // If user cancelled the prompt, treat as failed and redirect.
+      if (input === null) {
+        alert("No password entered. Let's try that again.");
+        window.location.href = "http://klaudiarudna.com";
+        return;
+      }
+
+      const candidateHash = await computeSaltedHashBase64(SALT, input);
+
+      if (candidateHash === STORED_HASH_BASE64) {
+        // success: store token (not the password) and allow viewing the page
+        sessionStorage.setItem(ACCESS_KEY, ACCESS_TOKEN);
+        // optionally clear attempt count
+        sessionStorage.removeItem(ACCESS_KEY + "-attempts");
+        return;
+      } else {
+        attempts += 1;
+        sessionStorage.setItem(ACCESS_KEY + "-attempts", String(attempts));
+        alert("Hmm, that's not quite right. Give it another go.");
+      }
+    }
+
+    // too many fails -> redirect
+    alert("Multiple incorrect attempts. Need the password? Check my CV or message me on LinkedIn.");
+    window.location.href = "http://klaudiarudna.com";
+  })();
+</script> 
 <!-- Clarity -->
   <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
