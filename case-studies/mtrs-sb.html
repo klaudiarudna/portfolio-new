@@ -7,77 +7,7 @@
   <link rel="stylesheet" href="../styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../img/krlogo.svg">
-  <script>
- const SALT = "somesalt123";
-  const STORED_HASH_BASE64 = "j7tF++JuruDAWZbDEgqcwcTYvD4mN+pdXq9Vh9av/9Q=";
-
-  // sessionStorage key we set when access is granted (we store a token, not the password)
-  const ACCESS_KEY = "caseStudyAccess";
-  const ACCESS_TOKEN = "granted-v1";
-
-  // max attempts before redirect
-  const MAX_ATTEMPTS = 3;
-
-  // helper: convert ArrayBuffer to Base64
-  function arrayBufferToBase64(buffer) {
-    const bytes = new Uint8Array(buffer);
-    let binary = "";
-    for (let i = 0; i < bytes.byteLength; i++) {
-      binary += String.fromCharCode(bytes[i]);
-    }
-    return btoa(binary);
-  }
-
-  // compute SHA-256(salt + password) and return Base64 string
-  async function computeSaltedHashBase64(salt, password) {
-    const enc = new TextEncoder();
-    const data = enc.encode(salt + password);
-    const digest = await crypto.subtle.digest("SHA-256", data);
-    return arrayBufferToBase64(digest);
-  }
-
-  // main check routine (runs on page load)
-  (async function checkAccess() {
-    // If already granted in this session — skip prompt
-    if (sessionStorage.getItem(ACCESS_KEY) === ACCESS_TOKEN) {
-      return; // allowed to view
-    }
-
-    let attempts = 0;
-    // try to read stored attempt count (so refresh loses attempts? up to you)
-    const attemptsStored = sessionStorage.getItem(ACCESS_KEY + "-attempts");
-    if (attemptsStored) attempts = parseInt(attemptsStored, 10) || 0;
-
-    while (attempts < MAX_ATTEMPTS) {
-      const input = prompt("This case study is password-protected to respect client confidentiality. You'll find the password in my CV, or feel free to message me on LinkedIn to request access.");
-
-      // If user cancelled the prompt, treat as failed and redirect.
-      if (input === null) {
-        alert("No password entered. Let's try that again.");
-        window.location.href = "http://klaudiarudna.com";
-        return;
-      }
-
-      const candidateHash = await computeSaltedHashBase64(SALT, input);
-
-      if (candidateHash === STORED_HASH_BASE64) {
-        // success: store token (not the password) and allow viewing the page
-        sessionStorage.setItem(ACCESS_KEY, ACCESS_TOKEN);
-        // optionally clear attempt count
-        sessionStorage.removeItem(ACCESS_KEY + "-attempts");
-        return;
-      } else {
-        attempts += 1;
-        sessionStorage.setItem(ACCESS_KEY + "-attempts", String(attempts));
-        alert("Hmm, that's not quite right. Give it another go.");
-      }
-    }
-
-    // too many fails -> redirect
-    alert("Multiple incorrect attempts. Need the password? Check my CV or message me on LinkedIn.");
-    window.location.href = "http://klaudiarudna.com";
-  })();
-</script>
+ 
 <!-- Clarity -->
   <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
@@ -122,7 +52,7 @@
           <p>The business lacked a single source of truth for customer journeys. Processes were siloed, ownership was unclear, and no visual framework connected customer touchpoints to the complex systems behind them.</p>
           <p>The challenge was threefold:</p>
           <ul class="bullets">
-            <li>Misaligned expectations: Some stakeholders saw the blueprint as a tool to support a transition to a new pricing model, others wanted improvements to the current model.</li>
+            <li>Misaligned expectations: Some stakeholders saw the blueprint as supporting a future strategic shift, others wanted improvements to the current model.</li>
             <li>Timing risk: Mapping began late in the project, raising concerns from the project manager that new discoveries could delay delivery.</li>
             <li>Maturity gap: The business was accustomed to detailed customer journeys, but a service blueprint requires a higher-level, systems perspective. Managing expectations was critical.</li>
           </ul>
@@ -130,7 +60,7 @@
         <div class="col">
           <p class="case-tag">MY ROLE</p>
           <h2>Leading Clarity from Discovery to Decision</h2>
-          <p>My goal: build a service blueprint capturing customer and employee experience, systems, and processes — giving leadership a strategic tool to make informed, data-driven decisions.</p>
+          <p>My goal: build a service blueprint capturing customer and employee experience, systems, and processes - giving leadership a strategic tool to make informed, data-driven decisions.</p>
           <p>I acted as strategist, facilitator, and designer of the blueprinting process, responsible for:</p>
           <p class="quote">“This is a big undertaking, and you’ve put it together in a really short span of time… really, really good.” <span>- Product Team</span></p>
         </div>
@@ -147,13 +77,13 @@
     <section class="section bg-light">
       <div class="container container-1col narrow">
         <p class="case-tag">IMPACT</p>
-        <h2>Reducing Manual Work by 80% and Unlocking £200k in Value</h2>
+        <h2>Reducing Manual Work by 80% and Unlocking £150k in Value</h2>
         <p>The blueprint delivered both immediate operational value and long-term strategic clarity - proving how structured collaboration and systems thinking can uncover measurable business impact.</p>
         <h3>Quantifiable Outcomes</h3>
           <ul class="bullets">
             <li><b>28 stakeholders aligned</b> across <b>6 departments</b>, with <b>20 actively contributing</b> through workshops and 1:1 sessions.</li>
-            <li><b>29 pain points</b> and <b>6 critical risks</b> identified — several directly linked to revenue leakage and customer retention.</li>
-            <li><b>70–80% reduction</b> in repetitive manual work for the sales team, freeing <b>1.5–2.5 FTEs</b> and generating an estimated <b>£100k–£200k in annual savings</b>.</li>
+            <li><b>29 pain points</b> and <b>6 critical risks</b> identified - several directly linked to revenue leakage and customer retention.</li>
+            <li><b>80% reduction</b> in repetitive manual work for the sales team, freeing <b>2 FTEs</b> and generating an estimated <b>£150k in annual savings</b>.</li>
           </ul>
           <h3>Broader Business Value</h3>
           <ul class="bullets">
@@ -169,13 +99,13 @@
       <div class="container container-1col narrow">
         <p class="case-tag">APPROACH</p>
         <h2>Defining and mitigating project risks</h2>
-        <p>Before mapping began, I analysed project risks and designed a structure to deliver fast, meaningful results within six weeks — aligning 28+ stakeholders while keeping the blueprint usable long after delivery.</p>
+        <p>Before mapping began, I analysed project risks and designed a structure to deliver fast, meaningful results within six weeks - aligning 28+ stakeholders while keeping the blueprint usable long after delivery.</p>
 
         <div class="subsection">
           <h3>Designing for Impact</h3>
           <p>Time was limited, so the focus was on <b>achievability with strategic value.</b></p>
           <p>Rather than capturing every detail, I prioritised an <b>end-to-end view</b> that revealed dependencies, inefficiencies, and automation opportunities leadership could act on immediately. </p>
-          <p>Detail was treated as a secondary layer — to be added once value was proven.</p>
+          <p>Detail was treated as a secondary layer - to be added once value was proven.</p>
         </div>
 
         <div class="subsection">
@@ -192,7 +122,7 @@
 
         <div class="subsection">
           <h3>Managing Expectations</h3>
-          <p>Different teams expected different outcomes — from a detailed process map to a strategic tool.
+          <p>Different teams expected different outcomes - from a detailed process map to a strategic tool.
 At kick-off, I reframed the blueprint as a decision-support artefact, not a delivery blocker.</p>
           <p>Success criteria were defined and validated via survey:</p>
           <ul class="bullets">
@@ -218,7 +148,7 @@ At kick-off, I reframed the blueprint as a decision-support artefact, not a deli
           <p>Longevity was designed in from the start.</p>
           <p>The blueprint lived in Miro, a tool already familiar across teams.</p>
           <p>I introduced colour-coded templates and usage rules for consistency and ease of maintenance.</p>
-          <p>Cards allowed for links, ownership, and layered detail — keeping the map clean yet actionable.</p>
+          <p>Cards allowed for links, ownership, and layered detail - keeping the map clean yet actionable.</p>
         </div>
 
         <div class="subsection">
@@ -234,7 +164,7 @@ At kick-off, I reframed the blueprint as a decision-support artefact, not a deli
 
           <h3>What Worked</h3>
 
-          <p>A structured facilitation approach — moving from individual input to group collaboration — kept conversations focused and inclusive.</p>
+          <p>A structured facilitation approach - moving from individual input to group collaboration - kept conversations focused and inclusive.</p>
           <p>Running a test workshop early on helped refine tools and prompts before scaling to larger groups.</p>
           <p>The progressive blueprint build maintained momentum and allowed insights to surface organically, rather than forcing consensus too early.</p>
           <p>Using Miro templates and rules ensured consistency, which made handover smooth and adoption straightforward.</p>
@@ -252,7 +182,7 @@ At kick-off, I reframed the blueprint as a decision-support artefact, not a deli
           <h3>Why It Matters</h3>
 
           <p>The project proved that even within tight timelines, it’s possible to turn fragmented processes and perspectives into a shared, actionable artefact that drives strategic decisions.</p>
-          <p>It showed how a well-facilitated blueprinting process can do more than visualise systems — it can shift how teams collaborate, prioritise, and deliver value.</p>
+          <p>It showed how a well-facilitated blueprinting process can do more than visualise systems - it can shift how teams collaborate, prioritise, and deliver value.</p>
 
       </div>
     </section>
